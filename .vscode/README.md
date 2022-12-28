@@ -1,25 +1,4 @@
 # VS Code Configuration
-
-Example configurations for debugging programs in-editor with VS Code.  
-This directory contains configurations for two platforms:
-
- - `LM3S6965EVB` on QEMU
- - `STM32F303x` via OpenOCD
-
-## Required Extensions
-
-If you have the `code` command in your path, you can run the following commands to install the necessary extensions.
-
-```sh
-code --install-extension rust-lang.rust
-code --install-extension marus25.cortex-debug
-```
-
-Otherwise, you can use the Extensions view to search for and install them, or go directly to their marketplace pages and click the "Install" button.
-
-- [Rust Language Server (RLS)](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust)
-- [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)
-
 ## Use
 
 The quickstart comes with two debug configurations.
@@ -33,30 +12,6 @@ Both are configured to build the project, using the default settings from `.carg
 2. OpenOCD: Starts a debug session for a `STM32F3DISCOVERY` board (or any `STM32F303x` running at 8MHz).
    - Follow the instructions above for configuring the build with `.cargo/config` and the `memory.x` linker script.
    - `ITM` output will be written to the Output view `SWO: ITM [port: 0, type: console]` output.
-
-### Git
-
-Files in the `.vscode/` directory are `.gitignore`d by default because many files that may end up in the `.vscode/` directory should not be committed and shared.  
-If you would like to save this debug configuration to your repository and share it with your team, you'll need to explicitly `git add` the files to your repository.
-
-```sh
-git add -f .vscode/launch.json
-git add -f .vscode/tasks.json
-git add -f .vscode/*.svd
-```
-
-## Customizing for other targets
-
-For full documentation, see the [Cortex-Debug][cortex-debug] repository.
-
-### Device
-
-Some configurations use this to automatically find the SVD file.  
-Replace this with the part number for your device.
-
-```json
-"device": "STM32F303VCT6",
-```
 
 ### OpenOCD Config Files
 
