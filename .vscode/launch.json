@@ -7,7 +7,7 @@
       "name": "Debug (OpenOCD)",
       "servertype": "openocd",
       "cwd": "${workspaceRoot}",
-      "executable": "./target/thumbv7em-none-eabihf/debug/stm32f401-rtic-starter",
+      "executable": "./target/thumbv7em-none-eabihf/debug/{{project-name}}",
       "preLaunchTask": "build",
       "device": "STM32F401RET6U",
       "configFiles": [
