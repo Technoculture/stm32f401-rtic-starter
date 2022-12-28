@@ -26,7 +26,7 @@ features = ["rt", "stm32f401"] # replace the model of your microcontroller here
 
 # this lets you use `cargo fix`!
 [[bin]]
-name = "{{crate-name}}"
+name = "{{crate_name}}"
 test = false
 bench = false
 
